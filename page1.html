@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hawaii Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bungee&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 1024px;
+        height: 1525px;
+        background: white;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+        margin: 24px auto;
+    } #textbox {
+        width: 768px;
+        height: 768px;
+        margin: 48px auto;
+        border: 1px dashed gray;
+    } #banner {
+        width: 1024px;
+    } h1 {
+        font: 48pt/1.4em 'Bad Script';
+        text-align: center;
+        margin: 54px 0 0 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } p {
+        font: 14pt/1.4em Georgia;
+        width: 768px;
+        margin: 24px auto;
+        padding-bottom: 175px;
+    } img.float-left {
+        width: 300px;
+        float: left;
+        margin: 0 24px 0 0;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } ul {
+        width: 100%;
+        margin-top: -4px;
+    } li {
+        font: 14pt/2.0em Georgia;
+        list-style: none;
+        float: left;
+        width: 50%;
+        height: 40px;
+        text-align: center;
+        background: rgba(169,225,245,0.80);
+    } a li {
+        color: black;
+    } a {
+        text-decoration: none;
+    } li:hover, a li:hover {
+        background: rgba(169,225,245,0.50);
+    } video { 
+			display:block;
+			margin: 0 auto;
+			border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px dimgray;
+			width: 512px;
+	}
+</style>
+</head>
+
+<body>
+    <div id="page">
+        <img id="banner" src="pol.png" />
+        <ul>
+            <li>Home</li> 
+			<a href="page2.html">
+            <li>What Is Kīlauea</li></a>
+        </ul>
+        <h1>The Island's Deeper Dive</h1>
+        <p><img class="float-left" src="go.png" />
+            Hawaii is home to many unique animals that live nowhere else in the world. Because the islands are far from other land, many animals evolved in special ways to survive there. Some native animals include the Hawaiian monk seal and the nēnē, which is Hawaii’s state bird. However, not all animals in Hawaii are native. Some were brought by humans, which changed the environment in big ways.</p>
+		<video poster="si.png" controls>
+  <source src="vidd.mp4" type="video/mp4">
+</video>
+   </div>
+</body>
+</html>
