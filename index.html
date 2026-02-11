@@ -2,86 +2,92 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hawaii Page</title>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bungee&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>Portfolio</title>
+
 <style>
+	@font-face {
+    font-family: MONELOS;
+    src: url("MONELOS.otf");
+}
+	
+	
     * {
         margin: 0;
         padding: 0;
-    } body {
-        background: whitesmoke;
-    } #page {
-        width: 1024px;
-        height: 1525px;
-        background: white;
-        border: 1px solid darkgray;
-        box-shadow: 2px 3px 6px darkgray;
-        margin: 24px auto;
-    } #textbox {
-        width: 768px;
-        height: 768px;
-        margin: 48px auto;
-        border: 1px dashed gray;
-    } #banner {
-        width: 1024px;
+    } @font-face {
+        font-family: Coolvetica Rg;
+        src: url("Coolvetica Rg.otf");
     } h1 {
-        font: 48pt/1.4em 'Bad Script';
+        font: 48pt/1.4em MONELOS;
         text-align: center;
-        margin: 54px 0 0 0;
-        color: brown;
-        text-shadow: 2px 3px 6px darkgray;
-    } p {
-        font: 14pt/1.4em Georgia;
-        width: 768px;
-        margin: 24px auto;
-        padding-bottom: 175px;
-    } img.float-left {
-        width: 300px;
-        float: left;
-        margin: 0 24px 0 0;
-        border: 1px solid darkgray;
-        box-shadow: 2px 3px 6px darkgray;
-    } ul {
-        width: 100%;
-        margin-top: -4px;
-    } li {
-        font: 14pt/2.0em Georgia;
-        list-style: none;
-        float: left;
-        width: 50%;
-        height: 40px;
-        text-align: center;
-        background: rgba(169,225,245,0.80);
-    } a li {
-        color: black;
-    } a {
-        text-decoration: none;
-    } li:hover, a li:hover {
-        background: rgba(169,225,245,0.50);
-    } video { 
-			display:block;
-			margin: 0 auto;
-			border: 1px solid dimgray;
-			box-shadow: 2px 3px 6px dimgray;
-			width: 512px;
-	}
+        text-shadow: 1px 5px 3px #304121;
+        margin: 24px 0;
+    } #textbox {
+        width: 1034px;
+        margin: 0 auto;
+		padding: 40px 0;
+        background: #4b6236;
+        box-shadow: 2px 3px 6px gainsboro;
+        border: 1px solid gainsboro;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items:center;
+		align-items; start;
+		gap: 40px;
+	
+    } figure {
+        margin: 0;
+		text-align: center;
+    } img, .zoom {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #304121;
+        box-shadow: 2px 3px 6px #304121;
+        transition: transform 0.5s;
+    } figcaption {
+        font: 12pt/1.4em Coolvetica Rg;
+        margin-top: 6px;
+		color: white;
+    } .zoom {
+        background: url("cu.png");
+        background-size: 190%;
+        background-position: center;
+    } img:hover {
+        transform: scale(1.13);
+        transition: transform 0.5s;
+    } .zoom:hover {
+        background-size: 100%;
+        transition: background-size 0.5s;
+    }
 </style>
 </head>
 
 <body>
-    <div id="page">
-        <img id="banner" src="pol.png" />
-        <ul>
-            <li>Home</li> 
-			<a href="index2.html">
-            <li>What Is Kīlauea</li></a>
-        </ul>
-        <h1>The Island's Deeper Dive</h1>
-        <p><img class="float-left" src="go.png" />
-            Hawaii is home to many unique animals that live nowhere else in the world. Because the islands are far from other land, many animals evolved in special ways to survive there. Some native animals include the Hawaiian monk seal and the nēnē, which is Hawaii’s state bird. However, not all animals in Hawaii are native. Some were brought by humans, which changed the environment in big ways.</p>
-		<video poster="si.png" controls>
-  <source src="vidd.mp4" type="video/mp4">
-</video>
-   </div>
+    <h1> My Portfolio</h1>
+    <div id="textbox">
+        <!-- Leaves photo -->
+        <figure>
+            <img src="cup.png"/>
+            <figcaption>
+            This is my cup mockup I made for Eco Bytez!
+            </figcaption>
+        </figure>
+    
+	 
+        <figure>
+            <img src="sa.png"/>
+            <figcaption>
+            This is my sauce packets mockup I made for Eco Bytez!
+            </figcaption>
+        </figure>
+    
+        <!-- Leaves photo -->
+        <figure>
+            <img src="pl.png"/>
+            <figcaption>
+            This is my rendered tray mockup I made for Eco Bytez!
+            </figcaption>
+        </figure>
+    </div>
 </body>
 </html>
