@@ -2,92 +2,237 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Portfolio</title>
-
+<title>Tables</title>
 <style>
 	@font-face {
-    font-family: MONELOS;
-    src: url("MONELOS.otf");
-}
+    font-family: monograph;
+    src: url("monograph-Regular.ttf");
+	}
 	
-	
-    * {
+	@font-face {
+    font-family: Creato;
+    src: url("CreatoDisplay-Regular.otf");
+	}{
         margin: 0;
         padding: 0;
-    } @font-face {
-        font-family: Coolvetica Rg;
-        src: url("Coolvetica Rg.otf");
+    } body {
+        background: aliceblue;
+    } div {
+        width: 612px;
+        height: 1700px;
+        margin: 48px auto;
+        background: white;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px dimgray;
     } h1 {
-        font: 48pt/1.4em MONELOS;
+        font: 36pt/1.4em monograph;
         text-align: center;
-        text-shadow: 1px 5px 3px #304121;
-        margin: 24px 0;
-    } #textbox {
-        width: 1034px;
-        margin: 0 auto;
-		padding: 40px 0;
-        background: #4b6236;
-        box-shadow: 2px 3px 6px gainsboro;
-        border: 1px solid gainsboro;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		justify-items:center;
-		align-items; start;
-		gap: 40px;
-	
-    } figure {
-        margin: 0;
-		text-align: center;
-    } img, .zoom {
-        width: 200px;
-        height: 200px;
-        border: 1px solid #304121;
-        box-shadow: 2px 3px 6px #304121;
-        transition: transform 0.5s;
-    } figcaption {
-        font: 12pt/1.4em Coolvetica Rg;
-        margin-top: 6px;
-		color: white;
-    } .zoom {
-        background: url("cu.png");
-        background-size: 190%;
-        background-position: center;
-    } img:hover {
-        transform: scale(1.13);
-        transition: transform 0.5s;
-    } .zoom:hover {
-        background-size: 100%;
-        transition: background-size 0.5s;
+		text-shadow: 1px 5px 3px #304121;
+    } p {
+        font: 14pt/1.4em Creato;
+		 text-align: center;
+    } h1, p {
+        width: 768px;
+        margin: 24px auto;
+
     }
+	table {
+    margin: auto;
+    font: 13pt/1.4em Creato;
+    border-collapse: collapse;
+    border: 2px solid dimgray;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+        url("tur.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1120px; 
+}
+	th {
+    font-weight: bold;
+    background-color: #304121;
+    color: white;
+    padding: 8px;
+    border: 1px solid dimgray;
+    text-align: center;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid dimgray;
+	}
 </style>
 </head>
 
 <body>
-    <h1> My Portfolio</h1>
-    <div id="textbox">
-        <!-- Leaves photo -->
-        <figure>
-            <img src="cup.png"/>
-            <figcaption>
-            This is my cup mockup I made for Eco Bytez!
-            </figcaption>
-        </figure>
+    <h1>Hawaii Island Animals</h1>
+    <p>This list highlights 20 unique animals found on Hawaii Island, along with where they are most commonly seen and a fun fact about each one.</p>
+	<div id="page">
+	<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Animal</th>
+      <th>Location on Island</th>
+      <th>Fun Fact</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <td>1</td>
+      <td>Hawaiian Green Sea Turtle (Honu)</td>
+      <td>Punaluʻu Black Sand Beach</td>
+      <td>They can hold their breath for up to 5 hours while resting underwater.</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Nēnē (Hawaiian Goose)</td>
+      <td>Hawaiʻi Volcanoes National Park</td>
+      <td>It is the official state bird of Hawaii.</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Hawaiian Monk Seal</td>
+      <td>Kona Coast</td>
+      <td>They are one of the most endangered seal species in the world.</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>Manta Ray</td>
+      <td>Keauhou Bay</td>
+      <td>They have the largest brain-to-body ratio of any fish.</td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>Spinner Dolphin</td>
+      <td>Kona Coast</td>
+      <td>They spin in the air to communicate and remove parasites
+	<tr>
+      <td>5</td>
+      <td>Spinner Dolphin</td>
+      <td>Kona Coast</td>
+      <td>They spin in the air to communicate and remove parasites.</td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>Humpback Whale</td>
+      <td>Kohala Coast (Winter Months)</td>
+      <td>They migrate over 3,000 miles to Hawaii each year to breed.</td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>Hawaiian Hoary Bat (‘Ōpe‘ape‘a)</td>
+      <td>Forests near Hilo</td>
+      <td>It is Hawaii’s only native land mammal.</td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>Jackson’s Chameleon</td>
+      <td>Rainforests near Hilo</td>
+      <td>Males have three horns and can move their eyes independently.</td>
+    </tr>
+
+    <tr>
+      <td>9</td>
+      <td>Wild Goat</td>
+      <td>Mauna Kea Slopes</td>
+      <td>Goats were introduced in the 1700s by explorers.</td>
+    </tr>
+
+    <tr>
+      <td>10</td>
+      <td>Wild Boar</td>
+      <td>Hamakua Forests</td>
+      <td>They were brought by Polynesians over 1,000 years ago.</td>
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td>Hawaiian Hawk (‘Io)</td>
+      <td>Island-wide Forest Areas</td>
+      <td>This hawk exists only on the Big Island.</td>
+    </tr>
+
+    <tr>
+      <td>12</td>
+      <td>Gold Dust Day Gecko</td>
+      <td>Gardens and Coastal Areas</td>
+      <td>Its bright colors help it blend into tropical plants.</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td>Blacktip Reef Shark</td>
+      <td>Shallow Coastal Waters</td>
+      <td>They are harmless to humans and prefer small fish.</td>
+    </tr>
+
+    <tr>
+      <td>14</td>
+      <td>Yellow Tang</td>
+      <td>Kona Reefs</td>
+      <td>They are one of the most popular aquarium fish in the world.</td>
+    </tr>
+
+    <tr>
+      <td>15</td>
+      <td>Hawaiian Happy Face Spider</td>
+      <td>Rainforests</td>
+      <td>Some have markings that look like a smiling face.</td>
+    </tr>
+
+    <tr>
+      <td>16</td>
+      <td>Moray Eel</td>
+      <td>Lava Rock Reefs</td>
+      <td>They open and close their mouths constantly to breathe.</td>
+    </tr>
+
+    <tr>
+      <td>17</td>
+      <td>Cardinal Honeycreeper (‘I‘iwi)</td>
+      <td>High Elevation Forests</td>
+      <td>Its curved beak is perfect for sipping nectar from native flowers.</td>
+    </tr>
+
+    <tr>
+      <td>18</td>
+      <td>Hawaiian Damselfly</td>
+      <td>Streams and Wetlands</td>
+      <td>One of the few native insects still surviving today.</td>
+    </tr>
+
+    <tr>
+      <td>19</td>
+      <td>Sea Cucumber</td>
+      <td>Tide Pools</td>
+      <td>They help keep reefs clean by eating sand and organic matter.</td>
+    </tr>
+
+    <tr>
+      <td>20</td>
+      <td>Octopus (Heʻe)</td>
+      <td>Rocky Shorelines</td>
+      <td>They can change color instantly to camouflage themselves.</td>
+    </tr>
+	
+	
+	
+	
+	
+	
     
-	 
-        <figure>
-            <img src="sa.png"/>
-            <figcaption>
-            This is my sauce packets mockup I made for Eco Bytez!
-            </figcaption>
-        </figure>
-    
-        <!-- Leaves photo -->
-        <figure>
-            <img src="pl.png"/>
-            <figcaption>
-            This is my rendered tray mockup I made for Eco Bytez!
-            </figcaption>
-        </figure>
-    </div>
+  
 </body>
 </html>
