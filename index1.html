@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<title>Monarch Butterflies</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                url("bg.png") no-repeat center/cover;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* MAIN ARTICLE */
+.content {
+    flex: 3;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(6px);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex: 1.2;
+    background: linear-gradient(180deg, #ff8c00, #111);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* TITLE */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, orange, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.45);
+}
+
+/* DROP CAP */
+.content p:first-of-type::first-letter {
+    float: left;
+    font-size: 5rem;
+    line-height: .8;
+    padding-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* PARAGRAPHS */
+.content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: #222;
+}
+
+/* PULL QUOTE */
+.pull-quote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #00000;
+    border-left: 6px solid #000000;
+    padding-left: 20px;
+    margin: 35px 0;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.25);
+}
+
+/* TEXT WRAP IMAGE */
+.butterfly-img {
+    float: right;
+    width: 260px;
+    margin: 10px 0 15px 25px;
+    shape-outside: url("lo.png");
+    shape-margin: 12px;
+}
+
+/* SIDEBAR STYLING */
+.sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    padding-left: 18px;
+    line-height: 1.8;
+}
+
+.fact-box {
+    background: rgba(255,255,255,0.15);
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .butterfly-img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="content">
+
+<h1>Monarch Butterflies</h1>
+
+<!-- YOUR PNG -->
+<img src="bg.png" alt="Monarch Butterfly" class="butterfly-img">
+
+<p>
+Monarch butterflies are among the most iconic and beloved insects on Earth, instantly recognizable by their vivid orange wings traced with bold black veins and dotted with delicate white markings. Beyond their striking appearance lies one of nature’s most astonishing phenomena: a migration spanning thousands of miles across an entire continent. Each year, generations of monarchs travel from the United States and Canada to the mountain forests of central Mexico, navigating distances far beyond what their fragile bodies seem capable of achieving.
+</p>
+
+<p>
+The monarch’s life cycle is a story of transformation and resilience. Beginning as tiny eggs laid on milkweed plants, the larvae emerge as striped caterpillars that feed exclusively on these leaves. After growing rapidly, they form a jade-green chrysalis adorned with golden flecks, within which their bodies completely reorganize. When the adult butterfly emerges, it carries not only the beauty of its new form but also the instinct to continue a journey that no single butterfly completes alone.
+
+</p>
+
+<div class="pull-quote">
+“The monarch migration is one of the greatest natural spectacles on the planet — a fragile miracle unfolding across generations.”
+</div>
+
+<p>
+Despite their strength and endurance, monarch populations have declined dramatically in recent decades. Habitat loss, pesticide exposure, and climate change have reduced the availability of milkweed and nectar sources essential for their survival. Conservationists emphasize that even small actions can make a difference: planting native flowers, avoiding harmful chemicals, and protecting natural habitats all contribute to sustaining these remarkable pollinators.
+</p>
+
+<p>
+Watching a monarch drift on a warm breeze is to witness both grace and determination. Their presence transforms ordinary landscapes into something extraordinary, connecting backyards and wild spaces to a migration route older than modern civilization.
+</p>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<h2>Monarch at a Glance</h2>
+
+<div class="fact-box">
+<strong>Wingspan:</strong> 3.5–4 inches<br>
+<strong>Lifespan:</strong> 2–6 weeks (summer), up to 8 months (migratory generation)<br>
+<strong>Diet:</strong> Nectar; caterpillars eat milkweed only
+</div>
+
+<div class="fact-box">
+<strong>Migration Distance:</strong><br>
+Up to 3,000 miles from Canada and the U.S. to Mexico.
+</div>
+
+<div class="fact-box">
+<strong>Why They Matter:</strong><br>
+Vital pollinators and indicators of ecosystem health.
+</div>
+
+<h2>How You Can Help</h2>
+<ul>
+<li>Plant native milkweed</li>
+<li>Grow nectar-rich flowers</li>
+<li>Avoid pesticides</li>
+<li>Support conservation efforts</li>
+</ul>
+
+</div>
+
+<body>
+</body>
+</html>
