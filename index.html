@@ -2,209 +2,178 @@
 <html>
 <head>
 <meta charset="utf-8">
-	
-  <title>Jellyfish — Ocean Drifters</title>
+<title>Water World</title>
 
-  <!-- Custom Fonts -->
-  <style>
+<style>
+    /* Fonts */
     @font-face {
-      font-family: 'Splatink';
-      src: url('Splatink_PERSONAL_USE_ONLY.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-
-	 
+        font-family: 'VintageCharm';
+        src: url('VintageCharm-Regular.otf');
     }
 
     @font-face {
-      font-family: 'CreatoDisplay';
-      src: url('CreatoDisplay-Regular.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        font-family: 'Roboto';
+        src: url('Roboto-Regular.ttf');
     }
 
     body {
-      font-family: 'CreatoDisplay', Arial, sans-serif;
-      background: linear-gradient(180deg, #0a2a43, #0f6b5f);
-      color: #e8fff9;
-      line-height: 1.6;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #a0e7ff, #fff6a3);
+        color: #033;
+        overflow-x: hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(6px);
+    /* Banner */
+    .banner {
+        background-image: url('tet.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
-    h1 {
-     font-family: 'Splatink', cursive;
-  font-size: 3rem;
-  color: #7fffd4;
-  text-shadow: 0 0 15px rgba(0,255,200,0.6);
-  margin-bottom: 0.5rem;
-  letter-spacing: 10px;
+    .banner h1 {
+        font-family: 'VintageCharm';
+        color: #fff8a6;
+        font-size: 4em;
+        background: rgba(0,0,0,0.5);
+        padding: 15px 30px;
+        border-radius: 12px;
+        letter-spacing: 2px;
     }
 
-    .subtitle {
-      opacity: 0.9;
-      font-size: 1.1rem;
+    /* Bubble animation */
+    .bubble {
+        position: fixed;
+        width: 60px;
+        bottom: -80px;
+        opacity: 0.7;
+        animation: floatUpDown 12s ease-in-out infinite;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem 1rem 3rem;
+    .bubble:nth-child(2) { left: 15%; animation-duration: 14s; }
+    .bubble:nth-child(3) { left: 35%; animation-duration: 10s; }
+    .bubble:nth-child(4) { left: 60%; animation-duration: 16s; }
+    .bubble:nth-child(5) { left: 80%; animation-duration: 13s; }
+
+    @keyframes floatUpDown {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-400px); }
+        100% { transform: translateY(0); }
     }
 
-    .hero-img {
-      width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 1.5rem auto;
-      border-radius: 18px;
-      box-shadow: 0 0 25px rgba(0, 255, 200, 0.35);
+    /* Content layout */
+    .content {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+        line-height: 1.8;
     }
 
-    section {
-      margin-top: 2.5rem;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 1.6rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    .section {
+        margin-bottom: 40px;
+        overflow: hidden; /* keeps float contained */
     }
 
-    h2 {
-      font-family: 'Splatink', cursive;
-      color: #7fffd4;
-      margin-bottom: 0.8rem;
-      font-size: 1.8rem;
-		letter-spacing: 10px;
+    .content h2 {
+        color: #045;
+        font-size: 1.8em;
+        margin-bottom: 10px;
     }
 
-    p {
-      margin-bottom: 0.9rem;
+    .content p {
+        margin-bottom: 15px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1rem;
+    /* Wrapped image */
+    .float-img {
+        float: right;
+        width: 260px;
+        margin: 10px 0 15px 20px;
+        border-radius: 12px;
     }
 
-    .card {
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: 14px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* Footer */
+    .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #044;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 18px rgba(0,255,200,0.5);
-    }
-
-    .card img {
-      width: 100%;
-      max-width: 220px;
-      border-radius: 12px;
-      margin-bottom: 0.6rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
-    /* ===== Responsive: Phones ===== */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.1rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      header {
-        padding: 2rem 0.8rem 1.5rem;
-      }
-
-      section {
-        padding: 1.2rem;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Jellyfish</h1>
-    <div class="subtitle">Graceful Drifters of the Ocean</div>
-  </header>
 
-  <main class="container">
-    <!-- HERO IMAGE (PNG) -->
-    <img src="jellyfish-hero.jpg" alt="Glowing jellyfish" class="hero-img" />
+<!-- Banner -->
+<div class="banner">
+    <h1>Water Wonders</h1>
+</div>
 
-    <section>
-      <h2>What Are Jellyfish?</h2>
-      <p>
-        Jellyfish are ancient marine animals that have existed for over 500 million years.
-        Despite their name, they are not fish at all. They belong to a group called
-        cnidarians, which also includes corals and sea anemones.
-      </p>
-      <p>
-        Their bodies are made mostly of water and consist of a bell-shaped top and
-        trailing tentacles used for capturing prey. Many species glow with stunning
-        bioluminescent colors in shades of blue, green, and purple.
-      </p>
-    </section>
+<!-- Bubbles -->
+<img src="bubbles.png" class="bubble" style="left:5%;">
+<img src="bubbles.png" class="bubble">
+<img src="bubbles.png" class="bubble">
+<img src="bubbles.png" class="bubble">
+<img src="bubbles.png" class="bubble">
 
-    <section>
-      <h2>Amazing Features</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="jellyfish-glow.jpg" alt="Bioluminescent jellyfish" />
-          <p>Some jellyfish produce their own light through bioluminescence.</p>
-        </div>
-        <div class="card">
-          <img src="jellyfish-tentacles.jpg" alt="Jellyfish tentacles" />
-          <p>Tentacles contain tiny stinging cells used to capture food.</p>
-        </div>
-        <div class="card">
-          <img src="jellyfish-swarm.jpg" alt="Group of jellyfish" />
-          <p>Large groups are called blooms and can contain thousands.</p>
-        </div>
-      </div>
-    </section>
+<!-- Content -->
+<div class="content">
 
-    <section>
-      <h2>Where They Live</h2>
-      <p>
-        Jellyfish are found in every ocean on Earth, from warm tropical waters to
-        icy polar seas. Some species even live in deep ocean environments where
-        sunlight never reaches.
-      </p>
-      <p>
-        They drift with currents rather than swimming strongly, which is why they
-        are often called ocean drifters.
-      </p>
-    </section>
-  </main>
+    <div class="section">
+        <img src="waves.jpg" class="float-img">
 
-  <footer>
-    © 2026 Ocean Life • Jellyfish Information Page
-  </footer>
+        <h2>Fascinating Facts About Water</h2>
+
+        <p>
+            Water covers approximately 71% of the Earth's surface, making it the most dominant natural feature of our planet. 
+            From vast oceans to quiet lakes and flowing rivers, water shapes landscapes and supports ecosystems everywhere.
+        </p>
+
+        <p>
+            The Pacific Ocean is the largest and deepest ocean on Earth, containing more than half of the planet's free water. 
+            Despite its size, scientists estimate that over 80% of the ocean remains unexplored, leaving countless mysteries beneath the surface.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Why Water Matters</h2>
+
+        <p>
+            Water is essential for all known forms of life. It regulates body temperature, supports plant growth, and allows vital 
+            chemical reactions to occur. Without water, ecosystems would collapse and life as we know it would not exist.
+        </p>
+
+        <p>
+            Oceans also play a major role in controlling Earth's climate by absorbing heat and carbon dioxide. This helps stabilize 
+            global temperatures and reduces the impact of climate change.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Freshwater vs Saltwater</h2>
+
+        <p>
+            About 97% of Earth's water is saltwater found in oceans, while only about 3% is freshwater. Of that small percentage, 
+            most is trapped in glaciers and ice caps, leaving a limited supply available for human use.
+        </p>
+
+        <p>
+            Protecting freshwater sources is incredibly important as populations grow and demand increases. Conservation efforts 
+            help ensure clean and safe water for future generations.
+        </p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Water Wonders | Explore the beauty and importance of water
+</div>
+
 </body>
 </html>
