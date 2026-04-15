@@ -1,205 +1,253 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
-<title>Monarch Butterflies</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>Tables</title>
 <style>
-body {
-    margin: 0;
-    font-family: 'Lora', serif;
-    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-                url("bg.png") no-repeat center/cover;
+	@font-face {
+    font-family: monograph;
+    src: url("monograph-Regular.ttf");
+	}
+	
+	@font-face {
+    font-family: Creato;
+    src: url("CreatoDisplay-Regular.otf");
+	}{
+        margin: 0;
+        padding: 0;
+    } body {
+        background: aliceblue;
+    } div {
+        width: 612px;
+        height: 1700px;
+        margin: 48px auto;
+        background: white;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px dimgray;
+    } h1 {
+        font: 36pt/1.4em monograph;
+        text-align: center;
+		text-shadow: 1px 5px 3px #304121;
+    } p {
+        font: 14pt/1.4em Creato;
+		 text-align: center;
+    } h1, p {
+        width: 768px;
+        margin: 24px auto;
+
+    }
+	table {
+    margin: auto;
+    font: 13pt/1.4em Creato;
+    border-collapse: collapse;
+    border: 2px solid dimgray;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+        url("tur.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1120px; 
 }
-
-/* Layout */
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 50px auto;
-    gap: 30px;
-    padding: 20px;
-}
-
-/* MAIN ARTICLE */
-.content {
-    flex: 3;
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(6px);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-/* SIDEBAR */
-.sidebar {
-    flex: 1.2;
-    background: linear-gradient(180deg, #ff8c00, #111);
-    color: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-
-/* TITLE */
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-
-    background: linear-gradient(90deg, orange, black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.45);
-}
-
-/* DROP CAP */
-.content p:first-of-type::first-letter {
-    float: left;
-    font-size: 5rem;
-    line-height: .8;
-    padding-right: 10px;
-    color: black;
+	th {
     font-weight: bold;
+    background-color: #304121;
+    color: white;
+    padding: 8px;
+    border: 1px solid dimgray;
+    text-align: center;
 }
 
-/* PARAGRAPHS */
-.content p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 22px;
-    color: #222;
-}
-
-/* PULL QUOTE */
-.pull-quote {
-    font-size: 1.6rem;
-    font-style: italic;
-    color: #00000;
-    border-left: 6px solid #000000;
-    padding-left: 20px;
-    margin: 35px 0;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.25);
-}
-
-/* TEXT WRAP IMAGE */
-.butterfly-img {
-    float: right;
-    width: 260px;
-    margin: 10px 0 15px 25px;
-    shape-outside: url("lo.png");
-    shape-margin: 12px;
-}
-
-/* SIDEBAR STYLING */
-.sidebar h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-top: 0;
-    border-bottom: 2px solid rgba(255,255,255,0.4);
-    padding-bottom: 10px;
-}
-
-.sidebar ul {
-    padding-left: 18px;
-    line-height: 1.8;
-}
-
-.fact-box {
-    background: rgba(255,255,255,0.15);
-    padding: 18px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .butterfly-img {
-        float: none;
-        display: block;
-        margin: 20px auto;
-    }
-}
+td {
+    padding: 8px;
+    border: 1px solid dimgray;
+	}
 </style>
 </head>
 
 <body>
+    <h1>Hawaii Island Animals</h1>
+	<button onclick="window.print()" 
+style="
+    display:block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 14pt;
+    font-family: Creato;
+    background:#304121;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+">
+    Print This Page
+</button>
+    <p>This list highlights 20 unique animals found on Hawaii Island, along with where they are most commonly seen and a fun fact about each one.</p>
+	<div id="page">
+	<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Animal</th>
+      <th>Location on Island</th>
+      <th>Fun Fact</th>
+    </tr>
+  </thead>
 
-<div class="container">
+  <tbody>
 
-<div class="content">
+    <tr>
+      <td>1</td>
+      <td>Hawaiian Green Sea Turtle (Honu)</td>
+      <td>Punaluʻu Black Sand Beach</td>
+      <td>They can hold their breath for up to 5 hours while resting underwater.</td>
+    </tr>
 
-<h1>Monarch Butterflies</h1>
+    <tr>
+      <td>2</td>
+      <td>Nēnē (Hawaiian Goose)</td>
+      <td>Hawaiʻi Volcanoes National Park</td>
+      <td>It is the official state bird of Hawaii.</td>
+    </tr>
 
-<!-- YOUR PNG -->
-<img src="bg.png" alt="Monarch Butterfly" class="butterfly-img">
+    <tr>
+      <td>3</td>
+      <td>Hawaiian Monk Seal</td>
+      <td>Kona Coast</td>
+      <td>They are one of the most endangered seal species in the world.</td>
+    </tr>
 
-<p>
-Monarch butterflies are among the most iconic and beloved insects on Earth, instantly recognizable by their vivid orange wings traced with bold black veins and dotted with delicate white markings. Beyond their striking appearance lies one of nature’s most astonishing phenomena: a migration spanning thousands of miles across an entire continent. Each year, generations of monarchs travel from the United States and Canada to the mountain forests of central Mexico, navigating distances far beyond what their fragile bodies seem capable of achieving.
-</p>
+    <tr>
+      <td>4</td>
+      <td>Manta Ray</td>
+      <td>Keauhou Bay</td>
+      <td>They have the largest brain-to-body ratio of any fish.</td>
+    </tr>
 
-<p>
-The monarch’s life cycle is a story of transformation and resilience. Beginning as tiny eggs laid on milkweed plants, the larvae emerge as striped caterpillars that feed exclusively on these leaves. After growing rapidly, they form a jade-green chrysalis adorned with golden flecks, within which their bodies completely reorganize. When the adult butterfly emerges, it carries not only the beauty of its new form but also the instinct to continue a journey that no single butterfly completes alone.
+    <tr>
+      <td>5</td>
+      <td>Spinner Dolphin</td>
+      <td>Kona Coast</td>
+      <td>They spin in the air to communicate and remove parasites
+	<tr>
+      <td>5</td>
+      <td>Spinner Dolphin</td>
+      <td>Kona Coast</td>
+      <td>They spin in the air to communicate and remove parasites.</td>
+    </tr>
 
-</p>
+    <tr>
+      <td>6</td>
+      <td>Humpback Whale</td>
+      <td>Kohala Coast (Winter Months)</td>
+      <td>They migrate over 3,000 miles to Hawaii each year to breed.</td>
+    </tr>
 
-<div class="pull-quote">
-“The monarch migration is one of the greatest natural spectacles on the planet — a fragile miracle unfolding across generations.”
-</div>
+    <tr>
+      <td>7</td>
+      <td>Hawaiian Hoary Bat (‘Ōpe‘ape‘a)</td>
+      <td>Forests near Hilo</td>
+      <td>It is Hawaii’s only native land mammal.</td>
+    </tr>
 
-<p>
-Despite their strength and endurance, monarch populations have declined dramatically in recent decades. Habitat loss, pesticide exposure, and climate change have reduced the availability of milkweed and nectar sources essential for their survival. Conservationists emphasize that even small actions can make a difference: planting native flowers, avoiding harmful chemicals, and protecting natural habitats all contribute to sustaining these remarkable pollinators.
-</p>
+    <tr>
+      <td>8</td>
+      <td>Jackson’s Chameleon</td>
+      <td>Rainforests near Hilo</td>
+      <td>Males have three horns and can move their eyes independently.</td>
+    </tr>
 
-<p>
-Watching a monarch drift on a warm breeze is to witness both grace and determination. Their presence transforms ordinary landscapes into something extraordinary, connecting backyards and wild spaces to a migration route older than modern civilization.
-</p>
+    <tr>
+      <td>9</td>
+      <td>Wild Goat</td>
+      <td>Mauna Kea Slopes</td>
+      <td>Goats were introduced in the 1700s by explorers.</td>
+    </tr>
 
-</div>
+    <tr>
+      <td>10</td>
+      <td>Wild Boar</td>
+      <td>Hamakua Forests</td>
+      <td>They were brought by Polynesians over 1,000 years ago.</td>
+    </tr>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
+    <tr>
+      <td>11</td>
+      <td>Hawaiian Hawk (‘Io)</td>
+      <td>Island-wide Forest Areas</td>
+      <td>This hawk exists only on the Big Island.</td>
+    </tr>
 
-<h2>Monarch at a Glance</h2>
+    <tr>
+      <td>12</td>
+      <td>Gold Dust Day Gecko</td>
+      <td>Gardens and Coastal Areas</td>
+      <td>Its bright colors help it blend into tropical plants.</td>
+    </tr>
 
-<div class="fact-box">
-<strong>Wingspan:</strong> 3.5–4 inches<br>
-<strong>Lifespan:</strong> 2–6 weeks (summer), up to 8 months (migratory generation)<br>
-<strong>Diet:</strong> Nectar; caterpillars eat milkweed only
-</div>
+    <tr>
+      <td>13</td>
+      <td>Blacktip Reef Shark</td>
+      <td>Shallow Coastal Waters</td>
+      <td>They are harmless to humans and prefer small fish.</td>
+    </tr>
 
-<div class="fact-box">
-<strong>Migration Distance:</strong><br>
-Up to 3,000 miles from Canada and the U.S. to Mexico.
-</div>
+    <tr>
+      <td>14</td>
+      <td>Yellow Tang</td>
+      <td>Kona Reefs</td>
+      <td>They are one of the most popular aquarium fish in the world.</td>
+    </tr>
 
-<div class="fact-box">
-<strong>Why They Matter:</strong><br>
-Vital pollinators and indicators of ecosystem health.
-</div>
+    <tr>
+      <td>15</td>
+      <td>Hawaiian Happy Face Spider</td>
+      <td>Rainforests</td>
+      <td>Some have markings that look like a smiling face.</td>
+    </tr>
 
-<h2>How You Can Help</h2>
-<ul>
-<li>Plant native milkweed</li>
-<li>Grow nectar-rich flowers</li>
-<li>Avoid pesticides</li>
-<li>Support conservation efforts</li>
-</ul>
+    <tr>
+      <td>16</td>
+      <td>Moray Eel</td>
+      <td>Lava Rock Reefs</td>
+      <td>They open and close their mouths constantly to breathe.</td>
+    </tr>
 
-</div>
+    <tr>
+      <td>17</td>
+      <td>Cardinal Honeycreeper (‘I‘iwi)</td>
+      <td>High Elevation Forests</td>
+      <td>Its curved beak is perfect for sipping nectar from native flowers.</td>
+    </tr>
 
-<body>
+    <tr>
+      <td>18</td>
+      <td>Hawaiian Damselfly</td>
+      <td>Streams and Wetlands</td>
+      <td>One of the few native insects still surviving today.</td>
+    </tr>
+
+    <tr>
+      <td>19</td>
+      <td>Sea Cucumber</td>
+      <td>Tide Pools</td>
+      <td>They help keep reefs clean by eating sand and organic matter.</td>
+    </tr>
+
+    <tr>
+      <td>20</td>
+      <td>Octopus (Heʻe)</td>
+      <td>Rocky Shorelines</td>
+      <td>They can change color instantly to camouflage themselves.</td>
+    </tr>
+	
+	
+	
+	
+	
+	
+    
+  
 </body>
 </html>
