@@ -1,253 +1,170 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Tables</title>
-<style>
-	@font-face {
-    font-family: monograph;
-    src: url("monograph-Regular.ttf");
-	}
-	
-	@font-face {
-    font-family: Creato;
-    src: url("CreatoDisplay-Regular.otf");
-	}{
-        margin: 0;
-        padding: 0;
-    } body {
-        background: aliceblue;
-    } div {
-        width: 612px;
-        height: 1700px;
-        margin: 48px auto;
-        background: white;
-        border: 1px solid dimgray;
-        box-shadow: 2px 3px 6px dimgray;
-    } h1 {
-        font: 36pt/1.4em monograph;
-        text-align: center;
-		text-shadow: 1px 5px 3px #304121;
-    } p {
-        font: 14pt/1.4em Creato;
-		 text-align: center;
-    } h1, p {
-        width: 768px;
-        margin: 24px auto;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Beginner-friendly guide to the stock market. Learn how to start investing, understand stocks, and build long-term wealth.">
+  <meta name="keywords" content="stock market, investing for beginners, how to invest, stocks guide, finance, ETFs, passive income">
+  <meta name="author" content="Stock Guide">
+
+  <!-- Open Graph (SEO + Social Sharing) -->
+  <meta property="og:title" content="Stock Market Starter Guide">
+  <meta property="og:description" content="Learn how to invest in the stock market with this beginner-friendly guide.">
+  <meta property="og:type" content="website">
+
+  <title>Stock Market Starter Guide</title>
+
+  <!-- Google Analytics (Replace G-XXXXXXX with your real ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Sport Break Free';
+      src: url('Sport Break Free Version.otf');
     }
-	table {
-    margin: auto;
-    font: 13pt/1.4em Creato;
-    border-collapse: collapse;
-    border: 2px solid dimgray;
 
-    background-image:
-        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-        url("tur.png");
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e6fff5, #ccffe6);
+      color: #333;
+    }
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1120px; 
-}
-	th {
-    font-weight: bold;
-    background-color: #304121;
-    color: white;
-    padding: 8px;
-    border: 1px solid dimgray;
-    text-align: center;
-}
+    header {
+      background: linear-gradient(135deg, #7fffd4, #66e6b3);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-td {
-    padding: 8px;
-    border: 1px solid dimgray;
-	}
-</style>
+    header h1 {
+      margin: 0;
+      color: white;
+      font-family: 'Sport Break Free', Arial, sans-serif;
+      font-size: 48px;
+      letter-spacing: 3px;
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 950px;
+      margin: 30px auto;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+    }
+
+    p {
+      line-height: 1.9;
+      margin-bottom: 25px;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+
+    p:hover {
+      color: #009e73;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #66e6b3;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00cc88;
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #7fffd4, #66e6b3);
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Hawaii Island Animals</h1>
-	<button onclick="window.print()" 
-style="
-    display:block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 14pt;
-    font-family: Creato;
-    background:#304121;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-">
-    Print This Page
-</button>
-    <p>This list highlights 20 unique animals found on Hawaii Island, along with where they are most commonly seen and a fun fact about each one.</p>
-	<div id="page">
-	<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Animal</th>
-      <th>Location on Island</th>
-      <th>Fun Fact</th>
-    </tr>
-  </thead>
 
-  <tbody>
-
-    <tr>
-      <td>1</td>
-      <td>Hawaiian Green Sea Turtle (Honu)</td>
-      <td>Punaluʻu Black Sand Beach</td>
-      <td>They can hold their breath for up to 5 hours while resting underwater.</td>
-    </tr>
-
-    <tr>
-      <td>2</td>
-      <td>Nēnē (Hawaiian Goose)</td>
-      <td>Hawaiʻi Volcanoes National Park</td>
-      <td>It is the official state bird of Hawaii.</td>
-    </tr>
-
-    <tr>
-      <td>3</td>
-      <td>Hawaiian Monk Seal</td>
-      <td>Kona Coast</td>
-      <td>They are one of the most endangered seal species in the world.</td>
-    </tr>
-
-    <tr>
-      <td>4</td>
-      <td>Manta Ray</td>
-      <td>Keauhou Bay</td>
-      <td>They have the largest brain-to-body ratio of any fish.</td>
-    </tr>
-
-    <tr>
-      <td>5</td>
-      <td>Spinner Dolphin</td>
-      <td>Kona Coast</td>
-      <td>They spin in the air to communicate and remove parasites
-	<tr>
-      <td>5</td>
-      <td>Spinner Dolphin</td>
-      <td>Kona Coast</td>
-      <td>They spin in the air to communicate and remove parasites.</td>
-    </tr>
-
-    <tr>
-      <td>6</td>
-      <td>Humpback Whale</td>
-      <td>Kohala Coast (Winter Months)</td>
-      <td>They migrate over 3,000 miles to Hawaii each year to breed.</td>
-    </tr>
-
-    <tr>
-      <td>7</td>
-      <td>Hawaiian Hoary Bat (‘Ōpe‘ape‘a)</td>
-      <td>Forests near Hilo</td>
-      <td>It is Hawaii’s only native land mammal.</td>
-    </tr>
-
-    <tr>
-      <td>8</td>
-      <td>Jackson’s Chameleon</td>
-      <td>Rainforests near Hilo</td>
-      <td>Males have three horns and can move their eyes independently.</td>
-    </tr>
-
-    <tr>
-      <td>9</td>
-      <td>Wild Goat</td>
-      <td>Mauna Kea Slopes</td>
-      <td>Goats were introduced in the 1700s by explorers.</td>
-    </tr>
-
-    <tr>
-      <td>10</td>
-      <td>Wild Boar</td>
-      <td>Hamakua Forests</td>
-      <td>They were brought by Polynesians over 1,000 years ago.</td>
-    </tr>
-
-    <tr>
-      <td>11</td>
-      <td>Hawaiian Hawk (‘Io)</td>
-      <td>Island-wide Forest Areas</td>
-      <td>This hawk exists only on the Big Island.</td>
-    </tr>
-
-    <tr>
-      <td>12</td>
-      <td>Gold Dust Day Gecko</td>
-      <td>Gardens and Coastal Areas</td>
-      <td>Its bright colors help it blend into tropical plants.</td>
-    </tr>
-
-    <tr>
-      <td>13</td>
-      <td>Blacktip Reef Shark</td>
-      <td>Shallow Coastal Waters</td>
-      <td>They are harmless to humans and prefer small fish.</td>
-    </tr>
-
-    <tr>
-      <td>14</td>
-      <td>Yellow Tang</td>
-      <td>Kona Reefs</td>
-      <td>They are one of the most popular aquarium fish in the world.</td>
-    </tr>
-
-    <tr>
-      <td>15</td>
-      <td>Hawaiian Happy Face Spider</td>
-      <td>Rainforests</td>
-      <td>Some have markings that look like a smiling face.</td>
-    </tr>
-
-    <tr>
-      <td>16</td>
-      <td>Moray Eel</td>
-      <td>Lava Rock Reefs</td>
-      <td>They open and close their mouths constantly to breathe.</td>
-    </tr>
-
-    <tr>
-      <td>17</td>
-      <td>Cardinal Honeycreeper (‘I‘iwi)</td>
-      <td>High Elevation Forests</td>
-      <td>Its curved beak is perfect for sipping nectar from native flowers.</td>
-    </tr>
-
-    <tr>
-      <td>18</td>
-      <td>Hawaiian Damselfly</td>
-      <td>Streams and Wetlands</td>
-      <td>One of the few native insects still surviving today.</td>
-    </tr>
-
-    <tr>
-      <td>19</td>
-      <td>Sea Cucumber</td>
-      <td>Tide Pools</td>
-      <td>They help keep reefs clean by eating sand and organic matter.</td>
-    </tr>
-
-    <tr>
-      <td>20</td>
-      <td>Octopus (Heʻe)</td>
-      <td>Rocky Shorelines</td>
-      <td>They can change color instantly to camouflage themselves.</td>
-    </tr>
-	
-	
-	
-	
-	
-	
-    
+  <header>
+    <h1>Stock Market Basics </h1>
   
+
+    <!-- Search Bar -->
+    <form action="https://www.google.com/search" method="GET" target="_blank" style="margin-top:20px;">
+      <input 
+        type="text" 
+        name="q" 
+        placeholder="Search anything on Google... 🔍" 
+        style="padding:12px; width:60%; border-radius:25px; border:none; outline:none; font-size:16px;"
+      >
+      <button 
+        type="submit" 
+        style="padding:12px 18px; border:none; border-radius:25px; background:#00cc88; color:white; font-weight:bold; cursor:pointer; margin-left:10px; transition:0.3s;"
+        onmouseover="this.style.transform='scale(1.1)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >Search</button>
+    </form>
+  </header>
+
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Stock market charts and financial data showing growth trends and investment analysis">
+
+    <p>
+      The stock market is a powerful financial system where individuals and institutions buy and sell ownership shares in publicly traded companies. When you purchase a stock, you are not just buying a number on a screen—you are actually owning a small portion of a real business. These businesses range across industries like technology, healthcare, retail, and energy, and their values change constantly based on performance, global events, and investor behavior. Understanding how supply and demand drives stock prices is one of the most important fundamentals, since prices increase when demand is high and decrease when selling pressure rises. In addition, the stock market plays a major role in the global economy by helping companies raise money to grow and innovate. Learning key concepts such as dividends, volatility, and long-term growth strategies helps beginners feel more confident and informed when entering the investing world.
+    </p>
+
+    <p>
+      Getting started with investing is more accessible today than ever before. With online brokerage platforms, you can open an account in minutes, deposit money, and begin building your portfolio. Beginners often start with index funds or ETFs because they provide instant diversification, meaning your money is spread across multiple companies instead of relying on just one. This reduces risk and creates a more stable investment foundation. It is also important to choose a strategy that fits your goals, whether that is long-term growth, passive income through dividends, or a balanced mix of both. One of the most powerful concepts in investing is compound growth, where your earnings begin to generate their own earnings over time. By consistently investing small amounts and staying disciplined, even beginners can grow their wealth steadily over the years.
+    </p>
+
+    <p>
+      Successful investing is not about quick wins—it is about patience, consistency, and smart decision-making. The market naturally goes through ups and downs, and short-term volatility can sometimes feel overwhelming. However, history shows that long-term investors who stay consistent tend to benefit the most. Avoid emotional reactions like panic selling during downturns or chasing hype when stocks are trending. Instead, focus on your long-term goals and maintain a diversified portfolio that matches your comfort level with risk. Continue learning by following financial news, studying market trends, and improving your understanding of economic principles. Over time, building strong habits like reinvesting dividends, staying consistent, and thinking long-term can help you create financial stability and independence.
+    </p>
+
+    <a href="#" class="button">Start Your Investing Journey 🚀</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Stock Market Guide | SEO Optimized ✔</p>
+  </footer>
+
 </body>
 </html>
