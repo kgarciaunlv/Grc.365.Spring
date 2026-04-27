@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Stingrays - Home</title>
+<title>About Stingrays</title>
 
 <style>
 /* Fonts */
@@ -20,16 +20,15 @@ body {
   margin-top: auto;
   font-family: "Cr";
   background: linear-gradient(to bottom, #878F7E, #fffff7);
-	
 }
 
-/* Main white content box */
+/* Main page container */
 .page {
   background-color: white;
   border: 8px solid white;
   max-width: 1100px;
   margin: 40px auto;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 /* Banner */
@@ -56,7 +55,6 @@ nav a {
   font-family: "Coolvetica";
   background-color: #ffffff;
   padding: 10px 15px;
-  border: 2px #38383A;
   border-radius: 8px;
   color: #000;
   transition: 0.2s;
@@ -67,38 +65,57 @@ nav a:hover {
   color: white;
 }
 
-/* Title */
+/* Main title */
 h1 {
   font-family: "Blackrush";
   text-align: center;
-
-  font-size: clamp(60px, 8vw, 120px);
+  font-size: clamp(50px, 7vw, 100px);
   margin-top: 50px;
-
   color: dimgrey;
-
   letter-spacing: 2px;
-
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 0, 0, 0.2),
     0 0 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Text */
+/* Content text */
 .content {
-  position: relative;
+	position: relative;
   top: -40px;
-  padding: 0px;
   text-align: center;
-  font-size: 18px;
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
-
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.content p {
-  line-height: 1.6;
+/* Video section title (NEW) */
+.video-title {
+  text-align: center;
+  font-family: "Blackrush";
+  font-size: 58px;
+  color: dimgrey;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie poster image */
+.poster {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  display: block;
+  margin: 20px auto;
+}
+
+.poster:hover {
+  transform: scale(1.03);
 }
 </style>
 </head>
@@ -120,20 +137,31 @@ h1 {
     <a href="mission.html">My Mission</a>
   </nav>
 
-  <!-- Title -->
-  <h1>Welcome To The Stingray World</h1>
+  <!-- Page Title -->
+  <h1>About Stingrays</h1>
 
-  <!-- Content -->
+  <!-- Text Content -->
   <div class="content">
+
     <p>
-      Welcome to my website all about stingrays! Here you will learn everything from where they live,
-      what they eat, and the different types of stingrays that exist in our oceans.
+      A common misconception about stingrays is that they are dangerous animals that actively attack humans.
+      In reality, stingrays are very shy creatures that usually hide under sand and only swim away when approached.
     </p>
 
     <p>
-      Keep exploring through the pages to discover more fascinating facts about these incredible sea creatures.
+      Another misconception is that their barb is used for hunting. In truth, it is only a defense tool used
+      when they feel threatened. Most stingray injuries happen accidentally when people step on them in shallow water.
     </p>
+
   </div>
+
+  <!-- Video Section -->
+  <h2 class="video-title">Stingray Video</h2>
+
+  <!-- Clickable movie poster ONLY -->
+  <a href="https://www.youtube.com/watch?v=GMEqMma8Knw" target="_blank">
+    <img src="vid.png" alt="Stingray Video Poster" class="poster">
+  </a>
 
 </div>
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Stingrays - Home</title>
+<title>Let's Dive Deeper</title>
 
 <style>
 /* Fonts */
@@ -20,16 +20,15 @@ body {
   margin-top: auto;
   font-family: "Cr";
   background: linear-gradient(to bottom, #878F7E, #fffff7);
-	
 }
 
-/* Main white content box */
+/* Main page container */
 .page {
   background-color: white;
   border: 8px solid white;
   max-width: 1100px;
   margin: 40px auto;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 /* Banner */
@@ -40,7 +39,7 @@ body {
   display: block;
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -56,7 +55,6 @@ nav a {
   font-family: "Coolvetica";
   background-color: #ffffff;
   padding: 10px 15px;
-  border: 2px #38383A;
   border-radius: 8px;
   color: #000;
   transition: 0.2s;
@@ -71,34 +69,63 @@ nav a:hover {
 h1 {
   font-family: "Blackrush";
   text-align: center;
-
-  font-size: clamp(60px, 8vw, 120px);
+  font-size: clamp(50px, 7vw, 100px);
   margin-top: 50px;
-
   color: dimgrey;
-
   letter-spacing: 2px;
-
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 0, 0, 0.2),
     0 0 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Text */
+/* Intro text */
 .content {
-  position: relative;
-  top: -40px;
-  padding: 0px;
   text-align: center;
-  font-size: 18px;
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
-
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.content p {
-  line-height: 1.6;
+/* FLEX BOX SECTION */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Each card */
+.card {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Images */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Fact text */
+.card p {
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 </style>
 </head>
@@ -121,18 +148,40 @@ h1 {
   </nav>
 
   <!-- Title -->
-  <h1>Welcome To The Stingray World</h1>
+  <h1>Let's Dive Deeper</h1>
 
-  <!-- Content -->
+  <!-- Intro -->
   <div class="content">
     <p>
-      Welcome to my website all about stingrays! Here you will learn everything from where they live,
-      what they eat, and the different types of stingrays that exist in our oceans.
+      Stingrays are fascinating animals with unique adaptations that help them survive in oceans around the world.
+      Below are some interesting facts about different types of stingrays and how they live.
     </p>
+  </div>
 
-    <p>
-      Keep exploring through the pages to discover more fascinating facts about these incredible sea creatures.
-    </p>
+  <!-- FLEX BOX CARDS -->
+  <div class="flex-container">
+
+    <div class="card">
+      <img src="c.png" alt="Stingray 1">
+      <p>
+        Stingrays often bury themselves in sand to hide from predators and ambush prey using their flat bodies.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="e.png" alt="Stingray 2">
+      <p>
+        Some stingrays can glide smoothly through water using their large pectoral fins like wings.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="d.png" alt="Stingray 3">
+      <p>
+        Stingrays use electroreceptors to detect hidden prey under sand and in murky water.
+      </p>
+    </div>
+
   </div>
 
 </div>

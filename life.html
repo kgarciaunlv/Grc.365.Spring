@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stages of Life</title>
+
+<style>
+@font-face {
+  font-family: "Blackrush";
+  src: url("Blackrush.ttf");
+}
+
+@font-face {
+  font-family: "Cr";
+  src: url("CreatoDisplay-Regular.otf");
+}
+
+body {
+  margin-top: auto;
+  font-family: "Cr";
+  background: linear-gradient(to bottom, #878F7E, #fffff7);
+}
+
+.page {
+  background-color: white;
+  border: 8px solid white;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding-bottom: 50px;
+}
+
+.banner {
+  width: 100%;
+  height: 1.5in;
+  object-fit: cover;
+  display: block;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #878F7E;
+  padding: 10px;
+  gap: 10px;
+  border-bottom: 2px solid #878F7E;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Coolvetica";
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #C7BDA5;
+  color: white;
+}
+
+h1 {
+  font-family: "Blackrush";
+  text-align: center;
+  font-size: clamp(50px, 7vw, 100px);
+  margin-top: 50px;
+  color: dimgrey;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  position: relative;
+  top: -40px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* IMAGE */
+.life-image {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* TABLE */
+table {
+  width: 95%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #878F7E;
+  color: white;
+  font-family: "Cr";
+  font-size: 13px;
+ letter-spacing: 1.5px;
+}
+
+td {
+  background-color: #ffffff;
+  vertical-align: top;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- Banner -->
+  <img src="banner.png" alt="Stingray Banner" class="banner">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Stingrays</a>
+    <a href="dive.html">Let's Dive Deeper</a>
+    <a href="life.html">Stages of Life</a>
+    <a href="habitat.html">Habitat</a>
+    <a href="mission.html">My Mission</a>
+  </nav>
+
+  <!-- Title -->
+  <h1>Stages of Life</h1>
+
+  <!-- Intro -->
+  <div class="content">
+    <p>
+      Stingrays go through many stages of development starting from an egg and growing into a fully mature adult.
+      Each stage shows small changes in size, movement, and survival ability.
+    </p>
+  </div>
+
+  <!-- IMAGE -->
+  <img src="st.jpg" alt="Stingray Life Stages Chart" class="life-image">
+
+  <!-- TABLE (18 stages) -->
+  <table>
+
+    <tr>
+      <th>1. Egg</th>
+      <th>2. Embryo</th>
+      <th>3. Early Development</th>
+      <th>4. Late Development</th>
+      <th>5. Hatching</th>
+      <th>6. Newborn</th>
+    </tr>
+
+    <tr>
+      <td>Stingray begins life inside a protective egg case.</td>
+      <td>Embryo forms and develops inside the egg.</td>
+      <td>Body shape becomes more defined.</td>
+      <td>Fins and tail continue forming.</td>
+      <td>Young stingray breaks out of egg case.</td>
+      <td>Fully formed but very small and vulnerable.</td>
+    </tr>
+
+    <tr>
+      <th>7. Juvenile I</th>
+      <th>8. Juvenile II</th>
+      <th>9. Growth Phase I</th>
+      <th>10. Growth Phase II</th>
+      <th>11. Subadult I</th>
+      <th>12. Subadult II</th>
+    </tr>
+
+    <tr>
+      <td>Begins learning to swim and hide.</td>
+      <td>Improves feeding skills in shallow waters.</td>
+      <td>Rapid growth in size and strength.</td>
+      <td>Becomes faster and more agile.</td>
+      <td>Starts moving into deeper waters.</td>
+      <td>Develops stronger survival instincts.</td>
+    </tr>
+
+    <tr>
+      <th>13 .Near Adult I</th>
+      <th>14. Near Adult II</th>
+      <th>15. Pre-Mature</th>
+      <th>16. Maturing</th>
+      <th>17. Adult I</th>
+      <th>18. Adult II</th>
+    </tr>
+
+    <tr>
+      <td>Almost full size but still developing.</td>
+      <td>Refining hunting and movement skills.</td>
+      <td>Body fully formed but not yet reproductive.</td>
+      <td>Approaching full maturity.</td>
+      <td>Fully grown stingray.</td>
+      <td>Fully mature, capable of reproduction.</td>
+    </tr>
+
+  </table>
+
+</div>
+
+</body>
+</html>

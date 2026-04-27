@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Habitat</title>
+
+<style>
+@font-face {
+  font-family: "Blackrush";
+  src: url("Blackrush.ttf");
+}
+
+@font-face {
+  font-family: "Cr";
+  src: url("CreatoDisplay-Regular.otf");
+}
+
+body {
+  margin-top: auto;
+  font-family: "Cr";
+  background: linear-gradient(to bottom, #878F7E, #fffff7);
+}
+
+/* Main page */
+.page {
+  background-color: white;
+  border: 8px solid white;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding-bottom: 50px;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 1.5in;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #878F7E;
+  padding: 10px;
+  gap: 10px;
+  border-bottom: 2px solid #878F7E;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Coolvetica";
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #C7BDA5;
+  color: white;
+}
+
+/* Title */
+h1 {
+  font-family: "Blackrush";
+  text-align: center;
+  font-size: clamp(50px, 7vw, 100px);
+  margin-top: 50px;
+  color: dimgrey;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Content */
+.content {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 20px;
+  text-align: justify;
+}
+
+/* Wrapped image */
+.float-image {
+  float: left;
+  width: 300px;
+  margin: 10px 20px 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Clear float */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ANIMATED STINGRAY */
+.stingray-animation {
+  position: fixed;
+  left: -150px;
+  width: 120px;
+  opacity: 0.9;
+  z-index: 999;
+  animation: swimAcross 12s linear infinite;
+}
+
+/* Swimming motion (left-right + up-down) */
+@keyframes swimAcross {
+  0% {
+    left: -150px;
+    top: 70%;
+  }
+
+  25% {
+    top: 55%;
+  }
+
+  50% {
+    top: 65%;
+  }
+
+  75% {
+    top: 50%;
+  }
+
+  100% {
+    left: 110%;
+    top: 60%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- Banner -->
+  <img src="banner.png" alt="Stingray Banner" class="banner">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Stingrays</a>
+    <a href="dive.html">Let's Dive Deeper</a>
+    <a href="life.html">Stages of Life</a>
+    <a href="habitat.html">Habitat</a>
+    <a href="mission.html">My Mission</a>
+  </nav>
+
+  <!-- Title -->
+  <h1>Habitat</h1>
+
+  <!-- Content -->
+  <div class="content clearfix">
+
+    <img src="b.png" alt="Stingray Habitat" class="float-image">
+
+    <p>
+      Stingrays depend on very specific habitats to survive, usually living in shallow coastal waters,
+      sandy ocean floors, and coral reef environments. These areas provide them with food, protection,
+      and places to bury themselves from predators.
+    </p>
+
+    <p>
+      Unfortunately, human activity is slowly destroying these habitats. Pollution, overfishing, and
+      coastal development are damaging ocean ecosystems and reducing safe spaces for stingrays to live.
+      As their habitats shrink, stingray populations become more vulnerable and struggle to survive.
+    </p>
+
+    <p>
+      Protecting marine environments is extremely important. If we continue to harm oceans at the current
+      rate, many species like stingrays may lose their natural homes completely.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- Animated stingray GIF -->
+<img src="rr.gif" alt="Swimming Stingray Animation" class="stingray-animation">
+
+</body>
+</html>

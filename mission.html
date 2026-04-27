@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Mission</title>
+
+<style>
+@font-face {
+  font-family: "Blackrush";
+  src: url("Blackrush.ttf");
+}
+
+@font-face {
+  font-family: "Cr";
+  src: url("CreatoDisplay-Regular.otf");
+}
+
+body {
+  margin-top: auto;
+  font-family: "Cr";
+  background: linear-gradient(to bottom, #878F7E, #fffff7);
+}
+
+/* Page container */
+.page {
+  background-color: white;
+  border: 8px solid white;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding-bottom: 50px;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 1.5in;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #878F7E;
+  padding: 10px;
+  gap: 10px;
+  border-bottom: 2px solid #878F7E;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Coolvetica";
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #C7BDA5;
+  color: white;
+}
+
+/* Title */
+h1 {
+  font-family: "Blackrush";
+  text-align: center;
+  font-size: clamp(50px, 7vw, 100px);
+  margin-top: 50px;
+  color: dimgrey;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Blurb */
+.content {
+	position: relative;
+  top: -40px;
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 20px;
+}
+
+/* FORM CONTAINER */
+.form-box {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background-color: #ffffff;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Inputs */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Cr";
+  font-size: 15px;
+}
+
+/* Section labels */
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Submit button (image) */
+.submit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.submit-btn img {
+  width: 140px;
+  transition: transform 0.2s;
+}
+
+.submit-btn img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- Banner -->
+  <img src="banner.png" alt="Stingray Banner" class="banner">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Stingrays</a>
+    <a href="dive.html">Let's Dive Deeper</a>
+    <a href="life.html">Stages of Life</a>
+    <a href="habitat.html">Habitat</a>
+    <a href="mission.html">My Mission</a>
+  </nav>
+
+  <!-- Title -->
+  <h1>My Mission</h1>
+
+  <!-- Blurb -->
+  <div class="content">
+    <p>
+      Join our stingray conservation program by symbolically adopting a stingray, supporting habitat restoration,
+      and helping fund marine protection efforts. Your contribution helps protect ocean ecosystems and allows
+      scientists to track and study stingray populations for future generations.
+    </p>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-box">
+
+    <form>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Donation Amount (USD)</label>
+      <select required>
+        <option>$5 - Supporter</option>
+        <option>$10 - Ocean Friend</option>
+        <option>$25 - Habitat Helper</option>
+        <option>$50 - Reef Protector</option>
+        <option>$100 - Stingray Guardian</option>
+      </select>
+
+      <label>Name Your Stingray</label>
+      <input type="text" placeholder="Give your stingray a name">
+
+      <label>Tracking Option</label>
+      <select>
+        <option>Basic Tracking Chip (Location updates)</option>
+        <option>Advanced Ocean Tracker (Migration paths)</option>
+        <option>Scientific Research Tracking (Full data access)</option>
+      </select>
+
+      <label>Message / Why you want to help</label>
+      <textarea rows="5" placeholder="Write your message here..."></textarea>
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit" class="submit-btn" title="Submit">
+        <img src="rr.gif" alt="Submit Stingray Button">
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>
